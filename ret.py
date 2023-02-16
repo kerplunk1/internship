@@ -8,7 +8,6 @@ def get_ret_json():
     url = 'https://www.ret.ru/?&pn=pline&view=list&gid=301745&prod=715101'
 
     session = Session()
-    session = Session()
     session.headers.update(
         {
             'accept-encoding': 'gzip, deflate, br',
