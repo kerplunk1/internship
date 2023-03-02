@@ -52,7 +52,7 @@ def insert_into_db(data):
             VALUES (STR_TO_DATE("{data[index]['date']}", "%Y-%m-%d"), '{data[index]['order_id']}', {data[index]['order']},
             {data[index]['order_r']}, '{data[index]['status']}', {data[index]['product_id']}, {1}, {data[index]['house_id']})""")
         except MySQLdb.IntegrityError:
-            print('error')
+            print('duplicate')
 
     db.commit()
 

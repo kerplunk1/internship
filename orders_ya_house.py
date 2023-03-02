@@ -40,7 +40,7 @@ def insert_into_db(data):
             c.execute(f"""INSERT INTO main_yandexhouse (id, title, stock_id)
                     VALUES ({data[index]['id']}, '{data[index]['title']}', NULL)""")
         except MySQLdb.IntegrityError:
-            pass
+            print('duplicate')
 
     db.commit()
 
